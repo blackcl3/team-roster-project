@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import getPlayers from '../api/playersData';
 import { useAuth } from '../utils/context/authContext';
 import PlayerCard from '../components/PlayerCard';
-import getTeam from '../api/teamsData';
 
 function Home() {
   const [players, setPlayers] = useState();
