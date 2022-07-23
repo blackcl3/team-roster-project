@@ -15,4 +15,24 @@ const getPlayers = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getPlayers;
+const getSinglePlayer = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/player/${firebaseKey}"`)
+    .then(resolve)
+    .catch(reject);
+});
+
+const createPlayer = (playerObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/player.json`, playerObj)
+    .then((response) => {
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/player/${response.data.name}.json`, payload)
+        .then(resolve);
+    })
+    .catch(reject);
+});
+
+export {
+  getPlayers,
+  createPlayer,
+  getSinglePlayer,
+};
