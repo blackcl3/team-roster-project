@@ -5,7 +5,7 @@ const dbUrl = clientCredentials.databaseURL;
 
 const getTeam = (uid) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/team.json?orderBy="uid"&equalTo="${uid}"`)
-    .then((response) => resolve(response.data))
+    .then((response) => resolve((Object.values(response.data))))
     .catch(reject);
 });
 
