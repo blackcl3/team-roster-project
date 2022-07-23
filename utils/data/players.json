@@ -1,0 +1,34 @@
+{
+  "-N7fVYFbgtZhjf0fkhdt": {
+    "firebaseKey": "-N7fVYFbgtZhjf0fkhdt",
+    "imageURL": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_69_20Adams_d1",
+    "name": "Johnny Adams",
+    "position": "Pitcher",
+    "teamfirebaseKey": "-N7fUmf1_SIW3JOSCSAf",
+    "uid": "NhrlXx4pdOMm85UdN3ueCDQS4S23"
+  },
+  "-N7fVzMRdVipYHJJDKCC": {
+    "firebaseKey": "-N7fVzMRdVipYHJJDKCC",
+    "imageURL": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_67_62Arthur_d1",
+    "name": "Chester",
+    "position": "Left-Field",
+    "teamfirebaseKey": "-N7fUmf1_SIW3JOSCSAf",
+    "uid": "NhrlXx4pdOMm85UdN3ueCDQS4S23"
+  },
+  "-N7fWERyuGB-HNHcwfYc": {
+    "firebaseKey": "-N7fWERyuGB-HNHcwfYc",
+    "imageURL": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_72_25Taft_d1",
+    "name": "Howard 'Hit 'em Where They Ain't' Taft",
+    "position": "Catcher",
+    "teamfirebaseKey": "-N7fUmf1_SIW3JOSCSAf",
+    "uid": "NhrlXx4pdOMm85UdN3ueCDQS4S23"
+  },
+  "-N7fWNjTfGtO7SEq7Ci7": {
+    "firebaseKey": "-N7fWNjTfGtO7SEq7Ci7",
+    "imageURL": "https://ids.si.edu/ids/deliveryService?id=NPG-NPG_65_25Garfield_d1",
+    "name": "Jimmy 'Big Jim' Garfield",
+    "position": "2nd Base",
+    "teamfirebaseKey": "-N7fUmf1_SIW3JOSCSAf",
+    "uid": "NhrlXx4pdOMm85UdN3ueCDQS4S23"
+  }
+}
