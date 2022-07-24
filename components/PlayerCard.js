@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link';
+import { deletePlayer } from '../api/playersData';
 
 export default function PlayerCard({ playerObj, onUpdate }) {
   const deleteThisPlayer = () => {
