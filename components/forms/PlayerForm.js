@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Form, Button, FloatingLabel } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { createPlayer } from '../../api/playersData';
+import { createPlayer, updatePlayer } from '../../api/playersData';
 import { useAuth } from '../../utils/context/authContext';
 
 const initialState = {
@@ -54,7 +54,7 @@ function PlayerForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput3" label="imageURL" className="mb-3">
+      <FloatingLabel controlId="floatingInput3" label="Image URL" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter Image URL"
@@ -64,7 +64,7 @@ function PlayerForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput3" label="playerPosition" className="mb-3">
+      <FloatingLabel controlId="floatingInput3" label="Player Position" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter Player Position"
