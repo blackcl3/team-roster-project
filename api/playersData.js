@@ -37,9 +37,16 @@ const updatePlayer = (playerObj, uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deletePlayer = (firebaseKey, uid) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/player/${firebaseKey}.json`)
+    .then(() => getPlayers(uid).then(resolve))
+    .catch(reject);
+});
+
 export {
   getPlayers,
   createPlayer,
   getSinglePlayer,
   updatePlayer,
+  deletePlayer,
 };
