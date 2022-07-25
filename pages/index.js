@@ -15,8 +15,8 @@ function Home() {
   }, []);
   return (
     <>
-      <h1>Welcome to HomeTeam, {user.displayName}!</h1>
-      <h3>Here are the current players on your team:</h3>
+      <h1 className="homePageh1">Welcome to HomeTeam, {user.displayName}!</h1>
+      <h3 className="homePageh3">Here are the current players on your team:</h3>
       <div className="playerCardContainer">
         {players?.map((player) => (
           <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllPlayers} />
