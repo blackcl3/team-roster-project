@@ -21,6 +21,24 @@ body {
   background-color: #88effd;
 }
 
+.homePageh1 {
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.homePageh3 {
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.playerFormh1 {
+  margin: 55px 0 10px 0;
+}
+
+.playerFormh2 {
+  padding: 20px 0;
+}
+
 .playerCardContainer {
   display: flex;
   flex-wrap: wrap;
