@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
-import { getPlayers } from '../api/playersData';
 import { useAuth } from '../utils/context/authContext';
-import PlayerCard from '../components/PlayerCard';
+import TeamCard from '../components/TeamCard';
+import getTeam from '../api/teamsData';
 
 export default function TeamPage() {
-  const [players, setPlayers] = useState();
+  const [teams, setTeams] = useState();
   const { user } = useAuth();
-  const getAllPlayers = () => {
-    getPlayers(user.uid).then(setPlayers);
+  const getAllTeams = () => {
+    getTeam(user.uid).then(setTeams);
   };
   useEffect(() => {
-    getAllPlayers();
+    getAllTeams();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -23,10 +23,10 @@ export default function TeamPage() {
         </Button>
       </Link>
       <h1>Teams</h1>
-      <h3 className="homePageh3">Here are the current players on your team:</h3>
+      <h3 className="homePageh3">Here are the current teams:</h3>
       <div className="playerCardContainer">
-        {players?.map((player) => (
-          <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllPlayers} />
+        {teams?.map((team) => (
+          <TeamCard key={team.teamfirebaseKey} teamObj={team} onUpdate={getAllTeams} />
         ))}
       </div>
     </>
