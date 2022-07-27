@@ -37,6 +37,12 @@ const updateTeam = (teamObj, uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteTeam = (teamfirebaseKey, uid) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/team/${teamfirebaseKey}.json`)
+    .then(() => getTeams(uid).then(resolve))
+    .catch(reject);
+});
+
 export {
-  getTeams, getSingleTeam, getPlayersByTeam, createTeam, updateTeam,
+  getTeams, getSingleTeam, getPlayersByTeam, createTeam, updateTeam, deleteTeam,
 };

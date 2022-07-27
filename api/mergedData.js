@@ -1,5 +1,5 @@
 import { deletePlayer } from './playersData';
-import { getSingleTeam, getPlayersByTeam } from './teamsData';
+import { getSingleTeam, getPlayersByTeam, deleteTeam } from './teamsData';
 
 const viewTeamDetails = (teamfirebaseKey) => new Promise((resolve, reject) => {
   Promise.all([getSingleTeam(teamfirebaseKey),
