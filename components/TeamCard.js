@@ -2,12 +2,12 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { deleteTeamPlayers } from '../api/mergedData';
 
 export default function TeamCard({ teamObj, onUpdate }) {
   const deleteThisTeam = () => {
     if (window.confirm(`Delete the ${teamObj.teamName}?`)) {
-      // eslint-disable-next-line no-undef
-      deleteTeam(teamObj.teamfirebaseKey).then(() => onUpdate());
+      deleteTeamPlayers(teamObj.teamfirebaseKey).then(() => onUpdate());
     }
   };
 
