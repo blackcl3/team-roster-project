@@ -19,7 +19,8 @@ export default function TeamCard({ teamObj, onUpdate }) {
           The {teamObj.teamCity} {teamObj.teamName}
         </Card.Title>
         <p>City: {teamObj.teamCity}</p>
-        <Link href={`/player/${teamObj.teamfirebaseKey}`} passHref>
+        <p>Can Anyone View This Team? {teamObj.public ? 'Public' : 'Private'} </p>
+        <Link href={`/team/${teamObj.teamfirebaseKey}`} passHref>
           <Button variant="primary" className="m-2">
             VIEW
           </Button>
@@ -41,6 +42,7 @@ TeamCard.propTypes = {
     teamCity: PropTypes.string,
     imageURL: PropTypes.string,
     teamfirebaseKey: PropTypes.string,
+    public: PropTypes.bool,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

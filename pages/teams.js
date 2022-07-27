@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
 import TeamCard from '../components/TeamCard';
-import getTeam from '../api/teamsData';
+import { getTeams } from '../api/teamsData';
 
 export default function TeamPage() {
   const [teams, setTeams] = useState();
   const { user } = useAuth();
   const getAllTeams = () => {
-    getTeam(user.uid).then(setTeams);
+    getTeams(user.uid).then(setTeams);
   };
   useEffect(() => {
     getAllTeams();
