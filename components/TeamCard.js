@@ -7,7 +7,7 @@ import { deleteTeamPlayers } from '../api/mergedData';
 export default function TeamCard({ teamObj, onUpdate }) {
   const deleteThisTeam = () => {
     if (window.confirm(`Delete the ${teamObj.teamName}?`)) {
-      deleteTeamPlayers(teamObj.teamfirebaseKey).then(() => onUpdate());
+      deleteTeamPlayers(teamObj.teamKey).then(() => onUpdate());
     }
   };
 
@@ -20,12 +20,12 @@ export default function TeamCard({ teamObj, onUpdate }) {
         </Card.Title>
         <p>City: {teamObj.teamCity}</p>
         <p>Can Anyone View This Team? {teamObj.public ? 'Public' : 'Private'} </p>
-        <Link href={`/team/${teamObj.teamfirebaseKey}`} passHref>
+        <Link href={`/team/${teamObj.teamKey}`} passHref>
           <Button variant="primary" className="m-2">
             VIEW
           </Button>
         </Link>
-        <Link href={`/team/edit/${teamObj.teamfirebaseKey}`} passHref>
+        <Link href={`/team/edit/${teamObj.teamKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisTeam} className="m-2">
@@ -41,7 +41,7 @@ TeamCard.propTypes = {
     teamName: PropTypes.string,
     teamCity: PropTypes.string,
     imageURL: PropTypes.string,
-    teamfirebaseKey: PropTypes.string,
+    teamKey: PropTypes.string,
     public: PropTypes.bool,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
