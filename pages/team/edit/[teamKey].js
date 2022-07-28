@@ -6,11 +6,11 @@ import { getSingleTeam } from '../../../api/teamsData';
 export function EditTeam() {
   const [editItem, setEditItem] = useState({});
   const router = useRouter();
-  const { teamfirebaseKey } = router.query;
+  const { teamKey } = router.query;
 
   useEffect(() => {
-    getSingleTeam(teamfirebaseKey).then(setEditItem);
-  }, [teamfirebaseKey]);
+    getSingleTeam(teamKey).then(setEditItem);
+  }, [teamKey]);
 
   return (<TeamForm obj={editItem} />);
 }

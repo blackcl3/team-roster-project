@@ -24,11 +24,11 @@ export default function TeamForm({ obj }) {
     }));
   };
   useEffect(() => {
-    if (obj.teamfirebaseKey) setFormInput(obj);
+    if (obj.teamKey) setFormInput(obj);
   }, [obj, user]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (obj.teamfirebaseKey) {
+    if (obj.teamKey) {
       // eslint-disable-next-line no-undef
       updateTeam(formInput).then(() => {
         router.push('/teams');
@@ -44,7 +44,7 @@ export default function TeamForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.teamfirebaseKey ? 'Update' : 'Create'} Team</h2>
+      <h2 className="text-white mt-5">{obj.teamKey ? 'Update' : 'Create'} Team</h2>
       <FloatingLabel
         controlId="floatingInput1"
         label="Team Name"
@@ -79,7 +79,7 @@ export default function TeamForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <Button type="submit">{obj.teamfirebaseKey ? 'Update' : 'Create'} Team</Button>
+      <Button type="submit">{obj.teamKey ? 'Update' : 'Create'} Team</Button>
     </Form>
   );
 }
@@ -89,7 +89,7 @@ TeamForm.propTypes = {
     teamName: PropTypes.string,
     imageURL: PropTypes.string,
     teamCity: PropTypes.string,
-    teamfirebaseKey: PropTypes.string,
+    teamKey: PropTypes.string,
     public: PropTypes.bool,
   }),
 };

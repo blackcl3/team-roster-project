@@ -26,7 +26,7 @@ export default function TeamPage() {
       <h3 className="homePageh3">Here are the current teams:</h3>
       <div className="playerCardContainer">
         {teams?.map((team) => (
-          <TeamCard key={team.teamfirebaseKey} teamObj={team} onUpdate={getAllTeams} />
+          <TeamCard key={team.teamKey} teamObj={team} onUpdate={getAllTeams} />
         ))}
       </div>
     </>

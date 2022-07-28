@@ -6,11 +6,11 @@ import PlayerCard from '../../components/PlayerCard';
 export default function IndividualTeamPage() {
   const router = useRouter();
   const [teamDetails, setTeamDetails] = useState({});
-  const { teamfirebaseKey } = router.query;
+  const { teamKey } = router.query;
 
   useEffect(() => {
-    viewTeamDetails(teamfirebaseKey).then(setTeamDetails);
-  }, [teamfirebaseKey]);
+    viewTeamDetails(teamKey).then(setTeamDetails);
+  }, [teamKey]);
   return (
     <>
       <div>{teamDetails.teamName}</div>
@@ -21,7 +21,7 @@ export default function IndividualTeamPage() {
             key={player.firebaseKey}
             playerObj={player}
             onUpdate={() => {
-              viewTeamDetails(teamfirebaseKey).then(setTeamDetails);
+              viewTeamDetails(teamKey).then(setTeamDetails);
             }}
           />
         ))}
