@@ -14,7 +14,6 @@ const deleteTeamPlayers = (teamKey) => new Promise((resolve, reject) => {
     const deletePlayersPromises = teamPlayersArray.map((player) => deletePlayer(player.firebaseKey));
 
     Promise.all(deletePlayersPromises).then(() => {
-      // eslint-disable-next-line no-undef
       deleteTeam(teamKey).then(resolve);
     });
   }).catch(reject);

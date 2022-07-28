@@ -32,7 +32,6 @@ function PlayerForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      // eslint-disable-next-line no-undef
       updatePlayer(formInput)
         .then(() => { router.push('/'); });
     } else {
@@ -87,7 +86,6 @@ function PlayerForm({ obj }) {
         >
           <option value="">Select a Team</option>
           {
-            // eslint-disable-next-line no-unused-vars
             teams.map((team) => (
               <option
                 key={team.teamKey}

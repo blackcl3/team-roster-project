@@ -43,3 +43,18 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.addteamButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.addteamButton {
+  align-items: center;
+}
+
+.teamCardImage {
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+}

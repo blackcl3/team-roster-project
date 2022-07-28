@@ -13,13 +13,13 @@ export default function TeamCard({ teamObj, onUpdate }) {
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img variant="top" src={teamObj.imageURL} alt={teamObj.imageURL} style={{ height: '400px' }} />
+      <Card.Img variant="top" src={teamObj.imageURL} alt={teamObj.imageURL} className="teamCardImage" />
       <Card.Body>
         <Card.Title>
           The {teamObj.teamCity} {teamObj.teamName}
         </Card.Title>
         <p>City: {teamObj.teamCity}</p>
-        <p>Can Anyone View This Team? {teamObj.public ? 'Public' : 'Private'} </p>
+        <p>Who Can See This Team? {teamObj.public ? 'Everyone' : 'Only You'} </p>
         <Link href={`/team/${teamObj.teamKey}`} passHref>
           <Button variant="primary" className="m-2">
             VIEW

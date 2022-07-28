@@ -17,13 +17,15 @@ export default function TeamPage() {
   }, []);
   return (
     <>
-      <Link href="/team/newTeam" passHref>
-        <Button variant="primary" className="m-2">
-          Add New Team
-        </Button>
-      </Link>
-      <h1>Teams</h1>
-      <h3 className="homePageh3">Here are the current teams:</h3>
+      <h2>Teams</h2>
+      <div className="addteamButtonDiv">
+        <Link href="/team/newTeam" passHref>
+          <Button variant="primary" className="addteamButton">
+            Add New Team
+          </Button>
+        </Link>
+      </div>
+      <h3 className="homePageh3">Here are your current teams:</h3>
       <div className="playerCardContainer">
         {teams?.map((team) => (
           <TeamCard key={team.teamKey} teamObj={team} onUpdate={getAllTeams} />
