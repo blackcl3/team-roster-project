@@ -23,12 +23,12 @@ export default function PlayerPage() {
   return (
     <>
       <Link href="/player/newPlayer" passHref>
-        <Button variant="primary" className="m-2">
+        <Button variant="primary" className="addplayerButton">
           Add New Player
         </Button>
       </Link>
       <SearchPlayer players={players} setFilteredData={setFilteredData} />
-      <h3 className="homePageh3">Here are the current players on your team:</h3>
+      <h3 className="homePageh3">Here are the current players on all your teams:</h3>
       <div className="playerCardContainer">
         {filteredData?.map((player) => (
           <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllPlayers} />

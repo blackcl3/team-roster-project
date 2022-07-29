@@ -43,3 +43,44 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.addteamButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.addteamButton {
+  align-items: center;
+}
+
+.addplayerButton {
+  margin: 40px 0;
+}
+
+.teamCardImage {
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.playerDetailsTeamText {
+  margin: 40px; 
+  padding: 20px; 
+}
+
+.playerDetailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1085px) {
+  .signOutButton {
+    margin-left: 500px;
+  }  
+}
+
+@media screen and (min-width: 1085px) {
+  .signOutButton {
+    margin-left: 800px;
+  }  
+}
