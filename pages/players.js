@@ -23,7 +23,7 @@ export default function PlayerPage() {
   return (
     <>
       <Link href="/player/newPlayer" passHref>
-        <Button variant="primary" className="m-2">
+        <Button variant="primary" className="addplayerButton">
           Add New Player
         </Button>
       </Link>
