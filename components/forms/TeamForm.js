@@ -79,6 +79,17 @@ export default function TeamForm({ obj }) {
           required
         />
       </FloatingLabel>
+      <Form.Check
+        type="switch"
+        id="public"
+        name="public"
+        label="Is This Team Public?"
+        checked={formInput.public}
+        onChange={(e) => setFormInput((prevState) => ({
+          ...prevState,
+          public: e.target.checked,
+        }))}
+      />
       <Button type="submit">{obj.teamKey ? 'Update' : 'Create'} Team</Button>
     </Form>
   );

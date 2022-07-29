@@ -3,8 +3,10 @@ import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { deleteTeamPlayers } from '../api/mergedData';
+import { useAuth } from '../utils/context/authContext';
 
 export default function TeamCard({ teamObj, onUpdate }) {
+  const { user } = useAuth();
   const deleteThisTeam = () => {
     if (window.confirm(`Delete the ${teamObj.teamName}?`)) {
       deleteTeamPlayers(teamObj.teamKey).then(() => onUpdate());
@@ -25,12 +27,19 @@ export default function TeamCard({ teamObj, onUpdate }) {
             VIEW
           </Button>
         </Link>
-        <Link href={`/team/edit/${teamObj.teamKey}`} passHref>
-          <Button variant="info">EDIT</Button>
-        </Link>
-        <Button variant="danger" onClick={deleteThisTeam} className="m-2">
-          DELETE
-        </Button>
+        {
+          user.uid === teamObj.uid
+            ? (
+              <>
+                <Link href={`/team/edit/${teamObj.teamKey}`} passHref>
+                  <Button variant="info">EDIT</Button>
+                </Link>
+                <Button variant="danger" onClick={deleteThisTeam} className="m-2">DELETE</Button>
+              </>
+            )
+            : ''
+        }
+
       </Card.Body>
     </Card>
   );
@@ -43,6 +52,7 @@ TeamCard.propTypes = {
     imageURL: PropTypes.string,
     teamKey: PropTypes.string,
     public: PropTypes.bool,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
