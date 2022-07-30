@@ -4,7 +4,7 @@
 
 ## LOOM Walkthrough
 
-[Walkthrough video of the project MVP](https://cb-team-roster.netlify.app - 30 July 2022)
+[Walkthrough video of the project MVP](https://www.loom.com/share/6e17a9c563444f428c9e85fa2c819c4c)
 
 ## Project Goal
 
