@@ -16,6 +16,7 @@ function Home() {
   };
   useEffect(() => {
     getAllPlayers();
+    document.title = 'HomeTeam';
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
