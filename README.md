@@ -1,4 +1,4 @@
-# React/Next.js Template
+# Team Roster
 
 [See Live Demo of this Project](https://cb-team-roster.netlify.app/)
 
